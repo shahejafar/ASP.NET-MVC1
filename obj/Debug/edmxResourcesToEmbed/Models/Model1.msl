@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MVC1DBModelStoreContainer" CdmEntityContainer="MVC1DBEntities">
+    <EntitySetMapping Name="tblemps">
+      <EntityTypeMapping TypeName="MVC1DBModel.tblemp">
+        <MappingFragment StoreEntitySet="tblemp">
+          <ScalarProperty Name="empid" ColumnName="empid" />
+          <ScalarProperty Name="empName" ColumnName="empName" />
+          <ScalarProperty Name="sallary" ColumnName="sallary" />
+          <ScalarProperty Name="mobileNumber" ColumnName="mobileNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

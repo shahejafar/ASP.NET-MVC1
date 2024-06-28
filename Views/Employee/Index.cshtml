@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MVCPractice.Models.tblemp>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @Html.ActionLink("Add New EMP", "Create")
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name </th>
+                    <th>Employee Sallary</th>
+                    <th>Mobile Number</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.empid</td>
+                    <td>@item.empName</td>
+                    <td>@item.sallary</td>
+                    <td>@item.mobileNumber</td>
+                    <td> @Html.ActionLink("Edit", "Edit", new { @id = item.empid })
+                    &nbsp;
+                    @Html.ActionLink("Delete", "Delete", new { @id = item.empid })</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>

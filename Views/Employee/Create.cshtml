@@ -1,0 +1,44 @@
+﻿@model MVCPractice.Models.tblemp
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <div> 
+
+       @using (Html.BeginForm())
+       { 
+            <table>
+                <tr>
+                    <td>Employee ID</td>
+                    <td>@Html.TextBoxFor(e => e.empid)</td>
+                </tr>
+                <tr>
+                    <td> Employee Name </td>
+                    <td>@Html.TextBoxFor(e => e.empName)</td>
+                </tr>
+                <tr>
+                    <td> Employee Sallary </td>
+                    <td>@Html.TextBoxFor(e => e.sallary)</td>
+                </tr>
+                <tr>
+                    <td> Mobile Number </td>
+                    <td>@Html.TextBoxFor(e => e.mobileNumber)</td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Submit" /></td>
+
+                </tr>
+            </table>
+            @Html.ActionLink("List All EMP", "Index")
+       }
+    </div>
+</body>
+</html>

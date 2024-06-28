@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MVC1DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblemp">
+    <Key>
+      <PropertyRef Name="empid" />
+    </Key>
+    <Property Name="empid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="empName" Type="varchar" MaxLength="100" />
+    <Property Name="sallary" Type="int" />
+    <Property Name="mobileNumber" Type="int" />
+  </EntityType>
+  <EntityContainer Name="MVC1DBModelStoreContainer">
+    <EntitySet Name="tblemp" EntityType="Self.tblemp" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
